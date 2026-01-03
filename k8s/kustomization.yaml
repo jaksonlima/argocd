@@ -6,4 +6,4 @@ resources:
 images:
 - name: gitops
   newName: jaksonsneider/gitops
-  newTag: dbe2e28853c1e143224ed4bd18c30db78a794dcc
+  newTag: 11eb92762004027847ed5237d29d51bf4c3178fd
