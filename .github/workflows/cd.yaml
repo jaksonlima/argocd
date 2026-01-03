@@ -33,3 +33,26 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm64
           tags: ${{ secrets.DOCKER_USERNAME }}/gitops:${{ github.sha }}, ${{ secrets.DOCKER_USERNAME }}/gitops:latest
+
+      - name: Setup Kustomization
+        uses: imranismail/setup-kustomize@v1
+        with:
+          kustomize-version: "4.5.7"
+
+      - name: Update Kustomization image
+        run: |
+          cd k8s
+          kustomize edit set image gitops=${{ secrets.DOCKER_USERNAME }}/gitops:${{ github.sha }}
+
+      - name: Commit and Push changes
+        run: |
+          cd k8s
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -am "Bump docker version"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repository: jaksonlima/argocd
