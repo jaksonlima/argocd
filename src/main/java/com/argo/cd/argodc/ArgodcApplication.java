@@ -18,7 +18,7 @@ public class ArgodcApplication {
 	static class Api {
 		@RequestMapping("/hello")
 		public String hello() {
-			return "Hello from ArgoCD! This is a Java Spring Boot Application.";
+			return "Hello from ArgoCD! This is a Java Spring Boot Application. v2";
 		}
 
 	}
