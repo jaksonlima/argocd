@@ -55,8 +55,3 @@ Acesse **[https://localhost:8080](https://www.google.com/search?q=https://localh
 - **Usuário:** `admin`
 - **Senha:** _(A senha recuperada no passo anterior)_
 
-```
-
-**Gostaria de adicionar uma seção de "Troubleshooting" ou "Como limpar o ambiente" (delete cluster) nesse arquivo?**
-
-```
