@@ -1,9 +1,10 @@
 kind: Kustomization
 apiVersion: kustomize.config.k8s.io/v1beta1
 resources:
-- deployment.yaml
+  - deployment
+  - service
 
 images:
-- name: gitops
-  newName: jaksonsneider/gitops
-  newTag: 19ed87f3d4aebfe6312b90aaae2ffa75a3d0342a
+  - name: gitops
+    newName: jaksonsneider/gitops
+    newTag: dbe2e28853c1e143224ed4bd18c30db78a794dcc
