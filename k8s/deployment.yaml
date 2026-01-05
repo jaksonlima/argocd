@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: my-app-container
-          image: jaksonsneider/gitops:latest
+          image: gitops
           ports:
             - containerPort: 8080
           env:
