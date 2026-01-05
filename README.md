@@ -1,4 +1,4 @@
-Aqui está o conteúdo formatado como código Markdown. Você pode copiar o bloco abaixo e salvar em um arquivo chamado `README.md` ou `INSTALL.md`.
+
 
 ````markdown
 # Guia de Configuração: Kind + ArgoCD
